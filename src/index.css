@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .font-display {
+    font-family: "Manrope", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Clean modern scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+    border: 2px solid #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #14b8a6;
+  }
+
+  ::selection {
+    background: #14b8a6;
+    color: #fff;
+  }
+
+  img {
+    -webkit-user-drag: none;
+  }
+}
+
+/* Soft glow / halo background */
+.halo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* Shimmer for loading states */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
